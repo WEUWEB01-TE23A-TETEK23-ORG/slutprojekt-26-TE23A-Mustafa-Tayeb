@@ -102,13 +102,13 @@ main article h2 {
 }
 
 main article h3 {
-    color: #e50914;
+    color: #db1922;
 }
 
 main article figure {
     width: 50%;
     padding: 20px;
-    border: 1px solid #e50914;
+    border: 1px solid #e90e19;
     margin: auto;
     margin-bottom: 15px;
 }
