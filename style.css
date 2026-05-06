@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* sidan */
+body {
+    /* FIX: ta bort backslash i filnamn */
+    background-image: url("./bilder/image copy 3.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #000; /* fallback om bilden inte funkar */
+}
+
+/* FIX: bättre kontrast */
+.kontainer {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    width: 1000px;
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+        "sidhuvud sidhuvud"
+        "innehåll sidebar"
+        "sidfot sidfot";
+    background-color: rgba(0, 0, 0, 0.7); /* stabil transparens */
+}
+
+/* sidhuvudet & meny */
+header {
+    color: #ffffff;
+    grid-area: sidhuvud;
+}
+
+header h1 {
+    font-family: "Delius", cursive;
+    font-size: 60px;
+    color: #e50914;
+}
+
+header nav {
+    background: linear-gradient(to bottom, #1a1a1a 0%, #e50914 50%, #b00610 100%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header nav a {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffcccc 100%);
+    color: #000000;
+}
+
+header nav a.aktiv {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffcccc 100%);
+    color: #000000;
+}
+
+/* innehållet */
+main {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    grid-area: innehåll;
+    color: #ffffff;
+}
+
+main article h2 {
+    margin-bottom: 15px;
+    color: #e50914;
+}
+
+main article h3 {
+    color: #e50914;
+}
+
+main article figure {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #e50914;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+main article figure figcaption {
+    color: #cccccc;
+}
+
+/* sidebar */
+aside {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    grid-area: sidebar;
+    color: #ffffff;
+}
+
+aside h4 {
+    margin-bottom: 15px;
+    color: #e50914;
+}
+
+aside p a {
+    color: #e50914;
+}
+
+/* footer */
+footer {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    grid-area: sidfot;
+    color: #ffffff;
+}
